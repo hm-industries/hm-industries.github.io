@@ -3,109 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Hamid Metal Industries - Metal, steel products, laser cutting, SS TIG welding, railings, grills and coloured tin shed work in Kanchrapara, West Bengal.">
-<meta name="theme-color" content="#0b0f14">
+<meta name="description" content="Hamid Metal Industries - Metal and steel products, laser cutting, grills, gates, railings, coloured tin sheds, toughened glass and rolling shutters in Kanchrapara, West Bengal.">
+<meta name="theme-color" content="#ffffff">
 <title>Hamid Metal Industries | Metal & Steel Fabrication</title>
 <style>
-:root{--bg:#080b0f;--panel:#11161d;--panel2:#171d25;--text:#f5f7fa;--muted:#aab3bf;--line:#27303b;--accent:#d8a84e;--accent2:#f0c96b;--max:1120px}
+:root{
+ --bg:#f6f8f7;--card:#fff;--text:#17212b;--muted:#64748b;--line:#e3e8e5;
+ --saffron:#ff9933;--green:#138808;--blue:#174ea6;--max:1120px;
+ --shadow:0 8px 24px rgba(23,33,43,.07)
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 a{text-decoration:none;color:inherit}
 .container{width:min(92%,var(--max));margin:auto}
-header{position:sticky;top:0;z-index:50;background:rgba(8,11,15,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-weight:900;letter-spacing:.4px;font-size:19px}
-.logo span{color:var(--accent)}
-nav{display:flex;gap:22px;font-size:14px;color:#d7dde5}
-nav a:hover{color:var(--accent)}
-.menu{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:9px;padding:8px 10px;font-size:20px}
-.hero{min-height:calc(100vh - 70px);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,rgba(216,168,78,.16),transparent 34%),linear-gradient(120deg,#080b0f 25%,#101720 100%);z-index:-1}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;padding:80px 0}
-.badge{display:inline-block;border:1px solid #5c4a28;color:var(--accent2);padding:7px 12px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:20px}
-h1{font-size:clamp(40px,6vw,72px);line-height:1.03;margin-bottom:22px}
-h1 span{color:var(--accent)}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.04)}
+header:after{content:"";display:block;height:3px;background:linear-gradient(90deg,var(--saffron) 0 33%,#fff 33% 66%,var(--green) 66%)}
+.nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-weight:900;letter-spacing:.3px;font-size:18px;white-space:nowrap}
+.logo span{color:var(--saffron)}
+nav{display:flex;align-items:center;gap:20px;font-size:14px;color:#334155}
+nav a:hover{color:var(--blue)}
+.fb{width:30px;height:30px;border:1px solid #d7dee8;border-radius:50%;display:grid;place-items:center;color:#1877f2;font-weight:900;font-family:Arial}
+.menu{display:none;background:#fff;border:1px solid var(--line);color:var(--text);border-radius:9px;padding:8px 10px;font-size:20px}
+.hero{position:relative;overflow:hidden;background:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,153,51,.16),transparent 30%),radial-gradient(circle at 15% 90%,rgba(19,136,8,.10),transparent 32%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:45px;align-items:center;padding:78px 0}
+.badge{display:inline-block;background:#fff7ed;border:1px solid #ffd7ad;color:#c76600;padding:7px 12px;border-radius:999px;font-size:12px;text-transform:uppercase;letter-spacing:1.1px;margin-bottom:18px;font-weight:800}
+h1{font-size:clamp(40px,6vw,70px);line-height:1.04;margin-bottom:20px}
+h1 span{color:var(--blue)}
 .hero p{font-size:18px;color:var(--muted);max-width:650px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:10px;font-weight:800;border:1px solid var(--line)}
-.btn.primary{background:var(--accent);color:#101010;border-color:var(--accent)}
-.btn.secondary{background:#11161d}
-.btn:hover{transform:translateY(-1px)}
-.hero-card{background:linear-gradient(145deg,#1a222c,#0d1117);border:1px solid var(--line);border-radius:24px;padding:34px;box-shadow:0 25px 80px rgba(0,0,0,.35)}
-.hero-card .mark{width:76px;height:76px;border:2px solid var(--accent);border-radius:18px;display:grid;place-items:center;color:var(--accent);font-size:30px;font-weight:900;margin-bottom:24px}
-.hero-card h3{font-size:26px;margin-bottom:10px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-weight:800;border:1px solid var(--line);transition:.18s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(0,0,0,.08)}
+.btn.call{background:var(--saffron);border-color:var(--saffron);color:#241200}
+.btn.wa{background:var(--green);border-color:var(--green);color:#fff}
+.btn.map{background:#fff;border-color:#cbd5e1;color:var(--blue)}
+.scroll-cue{display:flex;align-items:center;gap:8px;margin-top:30px;color:#174ea6;font-size:13px;font-weight:800;letter-spacing:.3px;animation:scrollPulse 1.8s ease-in-out infinite}
+.scroll-cue .arrow{font-size:20px}
+@keyframes scrollPulse{0%,100%{transform:translateY(0);opacity:.65}50%{transform:translateY(5px);opacity:1}}
+.hero-card{background:linear-gradient(145deg,#fff,#f3f7ff);border:1px solid #dce5ef;border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+.hero-card .mark{width:72px;height:72px;border-radius:18px;display:grid;place-items:center;background:#fff;border:2px solid var(--blue);color:var(--blue);font-size:28px;font-weight:900;margin-bottom:20px}
+.hero-card h3{font-size:25px;margin-bottom:8px}
 .hero-card p{font-size:15px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}
-.stat{padding:14px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,.02)}
-.stat b{display:block;color:var(--accent);font-size:20px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:22px}
+.stat{padding:13px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.stat b{display:block;color:var(--blue);font-size:18px}
 .stat small{color:var(--muted)}
-section{padding:90px 0}
-.section-head{margin-bottom:35px}
-.kicker{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-h2{font-size:clamp(30px,4vw,44px);margin-top:8px}
-.section-head p{color:var(--muted);max-width:700px;margin-top:10px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);padding:25px;border-radius:17px}
-.card .icon{font-size:27px;margin-bottom:16px}
-.card h3{font-size:20px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:14px}
-.work{background:#0b0f14}
+section{padding:78px 0}
+.section-head{margin-bottom:30px}
+.kicker{color:var(--green);font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+h2{font-size:clamp(30px,4vw,44px);margin-top:7px}
+.section-head p{color:var(--muted);max-width:720px;margin-top:8px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:var(--card);border:1px solid var(--line);padding:21px;border-radius:16px;box-shadow:var(--shadow);transition:.18s}
+.card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(23,33,43,.10)}
+.card .icon{font-size:25px;margin-bottom:12px}
+.card h3{font-size:19px;margin-bottom:7px}
+.card p{color:var(--muted);font-size:14px;min-height:45px}
+.card-actions{display:flex;gap:7px;margin-top:16px}
+.card-actions .btn{flex:1;padding:9px 8px;border-radius:8px;font-size:12px}
+.work{background:#eef5f1}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.photo{min-height:190px;border-radius:15px;border:1px solid var(--line);background:linear-gradient(135deg,#1a222b,#0d1116);display:flex;align-items:end;padding:15px;position:relative;overflow:hidden}
-.photo:before{content:"HAMID METAL";position:absolute;inset:auto -20px 50px auto;transform:rotate(-25deg);font-size:24px;font-weight:900;color:rgba(216,168,78,.07)}
+.photo{min-height:170px;border-radius:14px;border:1px solid #dce5df;background:linear-gradient(135deg,#fff,#edf2f0);display:flex;align-items:end;padding:14px;position:relative;overflow:hidden;box-shadow:0 4px 15px rgba(23,33,43,.05)}
+.photo:before{content:"HAMID METAL";position:absolute;right:-20px;bottom:55px;transform:rotate(-25deg);font-size:22px;font-weight:900;color:rgba(23,78,166,.06)}
 .photo span{font-weight:800;font-size:14px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.about-box{border-left:3px solid var(--accent);padding-left:22px}
-.about-box p{color:var(--muted);margin-top:12px}
-.points{display:grid;gap:12px;margin-top:22px}
-.points div{background:var(--panel);border:1px solid var(--line);padding:13px 15px;border-radius:10px}
-.contact{background:linear-gradient(180deg,#0b0f14,#0f151c)}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px}
-.contact-item{padding:15px 0;border-bottom:1px solid var(--line)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-box{border-left:4px solid var(--saffron);padding-left:20px}
+.about-box p{color:var(--muted);margin-top:10px}
+.points{display:grid;gap:11px}
+.points div{background:#fff;border:1px solid var(--line);padding:13px 15px;border-radius:10px;box-shadow:0 4px 14px rgba(23,33,43,.04)}
+.contact{background:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-card{background:#f8faf9;border:1px solid var(--line);border-radius:17px;padding:24px}
+.contact-item{padding:14px 0;border-bottom:1px solid var(--line)}
 .contact-item:last-child{border-bottom:0}
 .contact-item small{display:block;color:var(--muted);margin-bottom:3px}
-.contact-item a{color:var(--accent2);font-weight:700}
-footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
+.contact-item a{color:var(--blue);font-weight:800}
+.contact-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+footer{border-top:1px solid var(--line);padding:23px 0;color:var(--muted);font-size:13px;background:#fff}
 .footer-flex{display:flex;justify-content:space-between;gap:15px}
-
-.editor-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:-15px 0 25px}
-.editor-bar .btn{cursor:pointer;font-family:inherit;font-size:14px}
-.editor-bar span{color:var(--muted);font-size:12px}
-.photo{min-height:210px;cursor:pointer;background-size:cover;background-position:center}
-.photo .overlay{position:absolute;inset:0;background:linear-gradient(transparent 35%,rgba(0,0,0,.88));display:flex;align-items:end;padding:15px}
-.photo .caption{font-weight:800;font-size:14px;outline:none;min-width:60px}
-.photo .delete{position:absolute;right:10px;top:10px;border:0;background:rgba(0,0,0,.65);color:#fff;border-radius:8px;padding:6px 9px;cursor:pointer}
-
-
-.service-card{padding:0 0 18px;overflow:hidden}
-.service-card h3,.service-card p{margin-left:20px;margin-right:20px}
-.service-card h3{margin-top:18px}
-.service-card p{margin-bottom:16px}
-.service-photo{height:190px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1c2630,#0c1015);border-bottom:1px solid var(--line);font-size:28px;font-weight:900;letter-spacing:2px;color:rgba(216,168,78,.75);text-align:center}
-.wa-btn{display:inline-flex;margin:0 20px;padding:11px 14px;border-radius:9px;background:#167c3a;color:#fff;font-weight:800;font-size:13px}
-.wa-btn:hover{transform:translateY(-1px)}
-
 @media(max-width:800px){
- nav{display:none;position:absolute;top:70px;left:0;right:0;background:#0b0f14;border-bottom:1px solid var(--line);padding:15px 4%;flex-direction:column}
- nav.open{display:flex}.menu{display:block}
+ nav{display:none;position:absolute;top:71px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:14px 4%;flex-direction:column;align-items:stretch}
+ nav.open{display:flex}
+ nav a{padding:8px 0}
+ .fb{display:none}.menu{display:block}
  .hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}
- .hero-grid{padding:60px 0}.hero-card{display:none}
+ .hero-grid{padding:55px 0}.hero-card{display:none}
  .cards{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,1fr)}
- section{padding:65px 0}.footer-flex{flex-direction:column}
+ section{padding:60px 0}.footer-flex{flex-direction:column}
+ .logo{font-size:16px}
 }
+
+/* Premium responsive enhancements */
+.work-photo{min-height:220px;background:#fff;border:1px solid #dce5df;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;box-shadow:0 5px 18px rgba(23,33,43,.06);position:relative}
+.work-photo .photo-placeholder{flex:1;display:grid;place-items:center;background:linear-gradient(135deg,#f8fafc,#eef5f1);font-size:38px;color:#174ea6}
+.work-photo strong{padding:12px 14px 2px;font-size:14px}
+.work-photo small{padding:0 14px 13px;color:#64748b}
+.why{background:#fff}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.why-item{border:1px solid var(--line);border-radius:15px;padding:20px;background:#fff;box-shadow:0 6px 18px rgba(23,33,43,.05)}
+.why-item b{display:block;margin:7px 0 4px;font-size:17px}
+.why-item span{color:var(--muted);font-size:13px}
+.quote-banner{margin-top:28px;padding:26px;border-radius:18px;background:linear-gradient(110deg,#fff7ed,#f3fff4);border:1px solid #e1e8e2;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.quote-banner p{color:var(--muted);margin-top:5px}
+.quote-actions{display:flex;gap:9px;flex-wrap:wrap}
+.design-box{margin-top:22px;padding:22px;border:1px dashed #b9c7d8;border-radius:16px;background:#f8fbff}
+.design-box p{color:var(--muted);margin:5px 0 14px}
+.bottom-bar{display:none}
+@media(min-width:1100px){
+ .container{width:min(90%,1280px)}
+ .cards{grid-template-columns:repeat(4,1fr);gap:18px}
+ .gallery{grid-template-columns:repeat(4,1fr);gap:16px}
+ .why-grid{grid-template-columns:repeat(3,1fr)}
+ .hero-grid{padding:95px 0}
+ .hero-card{padding:38px}
+ section{padding:92px 0}
+}
+@media(min-width:1500px){
+ .container{width:min(88%,1450px)}
+ .cards{grid-template-columns:repeat(5,1fr)}
+ .gallery{grid-template-columns:repeat(4,1fr)}
+ h1{font-size:76px}
+}
+@media(max-width:800px){
+ .why-grid{grid-template-columns:1fr}
+ .quote-banner{flex-direction:column;align-items:flex-start}
+ .bottom-bar{position:fixed;display:flex;z-index:100;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.97);border:1px solid #dce3e8;border-radius:14px;padding:7px;box-shadow:0 8px 28px rgba(0,0,0,.15);gap:7px}
+ .bottom-bar a{flex:1;text-align:center;padding:10px 6px;border-radius:9px;font-size:12px;font-weight:900}
+ .bottom-bar .bc{background:#ff9933;color:#241200}
+ .bottom-bar .bw{background:#138808;color:#fff}
+ .bottom-bar .bm{background:#eef3ff;color:#174ea6}
+ body{padding-bottom:76px}
+}
+
+
+/* Premium storefront additions */
+.product-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.product-tile{background:#fff;border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow)}
+.product-tile .picon{font-size:28px;margin-bottom:8px}.product-tile h3{font-size:16px}.product-tile p{font-size:12px;color:var(--muted);margin:4px 0 12px}
+.trust-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.trust-pill{padding:8px 12px;border-radius:999px;background:#f8fafc;border:1px solid var(--line);font-size:12px;font-weight:800}
+.offer{background:linear-gradient(135deg,#174ea6,#123c80);color:#fff;border-radius:20px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:25px;box-shadow:0 14px 30px rgba(23,78,166,.18)}
+.offer p{opacity:.85;margin-top:5px}.offer .btn.map{border:0;background:#fff}
+.video-note{margin-top:14px;color:var(--muted);font-size:13px}
+@media(max-width:800px){.product-strip{grid-template-columns:1fr 1fr}.offer{flex-direction:column;align-items:flex-start}}
+@media(min-width:1100px){.product-strip{grid-template-columns:repeat(4,1fr)}}
+
+
+
+
+
+/* Larger premium tricolour-inspired brand */
+.logo{
+  font-size:clamp(22px, 3vw, 32px) !important;
+  font-weight:900 !important;
+  letter-spacing:-0.6px;
+  line-height:1.05;
+}
+.logo strong{
+  font-weight:900 !important;
+}
+.logo::after{
+  content:"";
+  display:block;
+  width:100%;
+  max-width:155px;
+  height:4px;
+  margin-top:6px;
+  border-radius:8px;
+  background:linear-gradient(90deg,#FF9933 0 33.33%,#174ea6 33.33% 66.66%,#138808 66.66% 100%);
+}
+@media(max-width:700px){
+  .logo{font-size:24px !important}
+  .logo::after{max-width:125px;height:3px;margin-top:5px}
+}
+
 </style>
 </head>
 <body>
+
 <header>
-  <div class="container nav">
-    <a class="logo" href="#home">HAMID <span>METAL</span> INDUSTRIES</a>
-    <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
-    <nav>
-      <a href="#home">Home</a><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a>
-    </nav>
-  </div>
+ <div class="container nav">
+  <a class="logo" href="#home">HAMID <span>METAL</span> INDUSTRIES</a>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Menu">☰</button>
+  <nav>
+   <a href="#home">Home</a><a href="#services">Services</a><a href="#products">Products</a><a href="#wholesale">Wholesale</a><a href="#work">Our Work</a><a href="#why">Why Us</a><a href="#about">About</a><a href="#contact">Contact</a>
+   <a class="fb" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">f</a>
+  </nav>
+ </div>
 </header>
 
 <main>
@@ -114,11 +199,12 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
   <div>
    <div class="badge">Metal • Steel • Fabrication</div>
    <h1>Built Strong.<br><span>Made to Last.</span></h1>
-   <p>Welcome to Hamid Metal Industries. All types of metal and steel products, fabrication, laser cutting, SS TIG welding, railings, grills and coloured tin shed work.</p>
+   <p>Welcome to Hamid Metal Industries. Metal & steel fabrication, wholesale iron and steel materials, laser cutting, grills, gates, railings, coloured tin shed, toughened glass and rolling shutter.</p>
    <div class="actions">
-    <a class="btn primary" href="tel:+917074778711">Call Now</a>
-    <a class="btn secondary" href="https://wa.me/917074778711" target="_blank">WhatsApp</a>
+    <a class="btn call" href="tel:+917074778711">Call Now</a>
+    <a class="btn wa" href="https://wa.me/917074778711" target="_blank">WhatsApp</a>
    </div>
+   <a class="scroll-cue" href="#services"><span>Scroll to Explore</span><span class="arrow">↓</span></a>
   </div>
   <div class="hero-card">
    <div class="mark">HMI</div>
@@ -135,31 +221,35 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 
 <section id="services">
  <div class="container">
-  <div class="section-head"><div class="kicker">What We Do</div><h2>Our Services</h2><p>আপনার প্রয়োজন অনুযায়ী metal, steel ও fabrication কাজের জন্য সরাসরি WhatsApp-এ যোগাযোগ করুন।</p></div>
+  <div class="section-head">
+   <div class="kicker">What We Do</div>
+   <h2>Our Services</h2>
+   <p>Choose a service and contact us directly for a quotation.</p>
+  </div>
   <div class="cards">
-   <div class="card service-card">
-    <div class="service-photo">TIN SHED</div><h3>Coloured Tin Shed</h3><p>Roofing ও coloured tin shed fabrication.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20Tin%20Shed%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • Tin Shed</a>
-   </div>
-   <div class="card service-card">
-    <div class="service-photo">GATE</div><h3>Gate & Grill</h3><p>MS/steel gate, grill ও custom metal design.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20Gate%20%26%20Grill%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • Gate</a>
-   </div>
-   <div class="card service-card">
-    <div class="service-photo">SS RAILING</div><h3>SS Railing</h3><p>Stainless-steel railing ও staircase work.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20SS%20Railing%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • SS Railing</a>
-   </div>
-   <div class="card service-card">
-    <div class="service-photo">LASER</div><h3>Laser Cutting</h3><p>Metal design, panel ও precision cutting.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20Laser%20Cutting%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • Laser Cutting</a>
-   </div>
-   <div class="card service-card">
-    <div class="service-photo">TIG</div><h3>SS TIG Welding</h3><p>Neat ও strong stainless-steel TIG welding.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20SS%20TIG%20Welding%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • TIG Welding</a>
-   </div>
-   <div class="card service-card">
-    <div class="service-photo">FABRICATION</div><h3>Custom Fabrication</h3><p>আপনার মাপ ও ডিজাইন অনুযায়ী custom metal work.</p>
-    <a class="wa-btn" href="https://wa.me/917074778711?text=Assalamu%20Alaikum%2C%20আমি%20Custom%20Fabrication%20এর%20কাজ%20সম্পর্কে%20জানতে%20চাই।" target="_blank">WhatsApp • Fabrication</a>
+   <div class="card"><div class="icon">🏠</div><h3>Coloured Tin Shed</h3><p>Strong roofing and shed fabrication for homes, shops and workspaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Coloured%20Tin%20Shed-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">▤</div><h3>Interior Design & Fabrication</h3><p>Custom metal interior fabrication for practical and modern spaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Interior%20Design%20%26%20Fabrication-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">🚪</div><h3>UPVC Sliding Doors & Windows</h3><p>Quality sliding doors and windows for residential and commercial spaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20UPVC%20Sliding%20Doors%20%26%20Windows-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">🛡️</div><h3>MS/SS Grills, Gates & Railings</h3><p>Strong steel grills, gates and railings with clean professional finishing.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20MS%2FSS%20Grills%2C%20Gates%20%26%20Railings-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">⛱️</div><h3>Pergola</h3><p>Custom metal pergola structures for homes, gardens and commercial spaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Pergola-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">🏗️</div><h3>Outdoor Structures</h3><p>Practical and durable outdoor metal structures built to your requirements.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Outdoor%20Structures-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">✦</div><h3>Laser Cutting</h3><p>Precision laser cutting for metal designs, panels and fabrication components.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Laser%20Cutting-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">⚙️</div><h3>Metal & Steel Products</h3><p>Metal and steel products for residential, commercial and industrial requirements.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Metal%20%26%20Steel%20Products-of%20Price%20জানতে%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">🪟</div><h3>Toughened Glass</h3><p>Clean, durable toughened glass solutions for homes, shops and commercial spaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Toughened%20Glass-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+   <div class="card"><div class="icon">🚪</div><h3>Rolling Shutter</h3><p>Strong rolling shutter solutions for shops, factories, garages and commercial spaces.</p><div class="card-actions"><a class="btn call" href="tel:+917074778711">Call</a><a class="btn wa" href="https://wa.me/917074778711?text=I%20Rolling%20Shutter-of%20quotation%20required।" target="_blank">WhatsApp</a></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="wholesale">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Wholesale Supply</div><h2>Iron & Steel Materials</h2><p>Wholesale লোহা ও স্টিলের মালও সরবরাহ করা হবে। requirementীয় মাল, সাইজ ও পরিমাণ জানিয়ে সরাসরি WhatsApp-এ Wholesale দর জেনে নিন।</p></div>
+  <div class="contact-card" style="background:linear-gradient(135deg,#fff7ed,#f3fff4);border-color:#dce5df">
+   <h3>📦 Wholesale Iron & Steel</h3>
+   <p style="color:var(--muted);margin:8px 0 16px">Bulk quantity, project material এবং steel/iron requirement-of জন্য সরাসরি quotation নিন।</p>
+   <div class="contact-actions">
+    <a class="btn call" href="tel:+917074778711">Call for Wholesale</a>
+    <a class="btn wa" href="https://wa.me/917074778711?text=I want wholesale pricing for iron and steel materials. My requirement is: " target="_blank">Get Wholesale Price</a>
    </div>
   </div>
  </div>
@@ -167,29 +257,74 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 
 <section class="work" id="work">
  <div class="container">
-  <div class="section-head">
-   <div class="kicker">Portfolio</div><h2>Our Work</h2>
-   <p>আমাদের metal, steel, stainless-steel ও fabrication কাজের কিছু নমুনা।</p>
+  <div class="section-head"><div class="kicker">Portfolio</div><h2>Our Work</h2><p>Real project photos can be added here to showcase our work.</p></div>
+  <div class="gallery">
+   <div class="work-photo"><div class="photo-placeholder">🏗️</div><strong>Steel Fabrication</strong><small>Custom metal structures</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🛡️</div><strong>SS Railing</strong><small>Clean-finish railing work</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🔲</div><strong>MS/SS Grills, Gates & Railings</strong><small>Steel fabrication & finishing</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🏠</div><strong>Coloured Tin Shed</strong><small>Roofing & shed work</small></div>
+   <div class="work-photo"><div class="photo-placeholder">✦</div><strong>Laser Cutting</strong><small>Precision metal cutting</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🔧</div><strong>Steel Welding</strong><small>Professional welding</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🪟</div><strong>Toughened Glass</strong><small>Glass solutions</small></div>
+   <div class="work-photo"><div class="photo-placeholder">🚪</div><strong>Rolling Shutter</strong><small>Commercial shutter work</small></div>
   </div>
-  <div class="gallery" id="gallery"></div>
+ </div>
+</section>
+
+
+
+<section id="products">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Popular Materials</div><h2>Iron & Steel Products</h2><p>Ask us directly for wholesale pricing and project material requirements.</p></div>
+  <div class="product-strip">
+   <div class="product-tile"><div class="picon">▰</div><h3>MS Angle</h3><p>For fabrication and project requirements</p><a class="btn wa" href="https://wa.me/917074778711?text=I%20MS%20Angle-of%20Wholesale%20Price%20জানতে%20required।" target="_blank">Get Price</a></div>
+   <div class="product-tile"><div class="picon">▬</div><h3>MS Channel</h3><p>For structural steel requirements</p><a class="btn wa" href="https://wa.me/917074778711?text=I%20MS%20Channel-of%20Wholesale%20Price%20জানতে%20required।" target="_blank">Get Price</a></div>
+   <div class="product-tile"><div class="picon">▤</div><h3>MS / GI Sheet</h3><p>For sheet and roofing requirements</p><a class="btn wa" href="https://wa.me/917074778711?text=I%20MS%20%2F%20GI%20Sheet-of%20Price%20জানতে%20required।" target="_blank">Get Price</a></div>
+   <div class="product-tile"><div class="picon">▣</div><h3>MS Pipes</h3><p>Square, round and rectangular pipe options</p><a class="btn wa" href="https://wa.me/917074778711?text=I%20MS%20Pipe-of%20Wholesale%20Price%20জানতে%20required।" target="_blank">Get Price</a></div>
+  </div>
+  <div class="trust-row"><span class="trust-pill">✓ Wholesale Enquiry</span><span class="trust-pill">✓ Custom Quantity</span><span class="trust-pill">✓ Direct WhatsApp Quote</span><span class="trust-pill">✓ Project Supply</span></div>
+ </div>
+</section>
+
+<section class="why" id="why">
+ <div class="container">
+  <div class="section-head"><div class="kicker">Why Hamid Metal</div><h2>Built Around Your Requirement</h2><p>From material selection to fabrication and finishing, we focus on practical solutions for every project.</p></div>
+  <div class="why-grid">
+   <div class="why-item">🔩<b>Quality Materials</b><span>Metal and steel products selected for your project requirement.</span></div>
+   <div class="why-item">📐<b>Custom Sizes</b><span>Work made according to your measurements, drawings and site needs.</span></div>
+   <div class="why-item">⚙️<b>Skilled Fabrication</b><span>Fabrication, welding and finishing handled with attention to detail.</span></div>
+   <div class="why-item">💰<b>Competitive Pricing</b><span>Discuss your quantity and requirement directly for a suitable quotation.</span></div>
+   <div class="why-item">📱<b>Direct WhatsApp Support</b><span>Send your requirement, design or project photo directly to us.</span></div>
+   <div class="why-item">🏗️<b>Residential & Commercial</b><span>Solutions for homes, shops, factories and commercial projects.</span></div>
+  </div>
+  <div class="quote-banner">
+   <div><h3>Have a project in mind?</h3><p>Tell us what you need and get in touch directly.</p></div>
+   <div class="quote-actions"><a class="btn call" href="tel:+917074778711">Get a Quote</a><a class="btn wa" href="https://wa.me/917074778711?text=I need a project quotation. My requirement is: " target="_blank">WhatsApp Quote</a></div>
+  </div>
+  <div class="design-box">
+   <h3>📐 Have a Design or Photo?</h3>
+   <p>Send your design, drawing or reference photo directly on WhatsApp.</p>
+   <a class="btn wa" href="https://wa.me/917074778711?text=I want to send my design/photo." target="_blank">Send Design on WhatsApp</a>
+  </div>
  </div>
 </section>
 
 <section id="about">
  <div class="container about-grid">
-  <div>
-   <div class="kicker">About Us</div><h2>Hamid Metal Industries</h2>
-   <div class="about-box"><p>We provide practical metal and steel fabrication services with a focus on strong construction, clean finishing and custom requirements.</p></div>
-  </div>
-  <div class="points">
-   <div>✓ Custom sizes and fabrication</div>
-   <div>✓ Metal & stainless-steel work</div>
-   <div>✓ Residential & commercial projects</div>
-   <div>✓ Direct contact for quotations</div>
-  </div>
+  <div><div class="kicker">About Us</div><h2>Hamid Metal Industries</h2><div class="about-box"><p>We provide practical metal and steel fabrication services with a focus on strong construction, clean finishing and custom requirements.</p></div></div>
+  <div class="points"><div>✓ Custom sizes and fabrication</div><div>✓ Metal & stainless-steel work</div><div>✓ Residential & commercial projects</div><div>✓ Direct contact for quotations</div></div>
  </div>
 </section>
 
+
+<section>
+ <div class="container">
+  <div class="offer">
+   <div><h2 style="font-size:30px">Have a Metal Project?</h2><p>Send your photo, design, size or quantity and we will discuss your requirement and quotation.</p></div>
+   <div class="quote-actions"><a class="btn map" href="https://wa.me/917074778711?text=আমার%20একটি%20metal%20project%20আছে।%20I%20design%2Fphoto%20পাঠাতে%20required।" target="_blank">Send Project on WhatsApp</a><a class="btn" style="background:#ff9933;border-color:#ff9933;color:#241200" href="tel:+917074778711">Call Now</a></div>
+  </div>
+ </div>
+</section>
 <section class="contact" id="contact">
  <div class="container">
   <div class="section-head"><div class="kicker">Get In Touch</div><h2>Contact Us</h2><p>Call or WhatsApp for your project requirements and quotation.</p></div>
@@ -198,87 +333,29 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
     <div class="contact-item"><small>Phone / WhatsApp</small><a href="tel:+917074778711">+91 70747 78711</a></div>
     <div class="contact-item"><small>Location</small><span>Majhipara, Kanchrapara, West Bengal 743145</span></div>
     <div class="contact-item"><small>Business</small><span>Hamid Metal Industries</span></div>
+    <div class="contact-actions"><a class="btn call" href="tel:+917074778711">Call Now</a><a class="btn wa" href="https://wa.me/917074778711" target="_blank">WhatsApp</a></div>
    </div>
    <div class="contact-card">
-    <h3>Visit / Find Us</h3>
-    <p style="color:var(--muted);margin:10px 0 20px">Open Google Maps for the business location.</p>
-    <a class="btn primary" href="https://maps.app.goo.gl/8FiQxYwnfmu4tWmn9" target="_blank">Open Google Maps</a>
+    <h3>Visit / Find Us</h3><p style="color:var(--muted);margin:10px 0 18px">Open Google Maps for the business location.</p>
+    <a class="btn map" href="https://maps.app.goo.gl/8FiQxYwnfmu4tWmn9" target="_blank">Open Google Maps</a>
    </div>
   </div>
  </div>
 </section>
 </main>
 
-<footer>
- <div class="container footer-flex"><div>© <span id="year"></span> Hamid Metal Industries. All rights reserved.</div><div>Metal • Steel • Fabrication</div></div>
+<div class="bottom-bar">
+ <a class="bc" href="tel:+917074778711">📞 Call</a>
+ <a class="bw" href="https://wa.me/917074778711" target="_blank">WhatsApp</a>
+ <a class="bm" href="#services">Services</a>
+</div>
+<footer><div class="container footer-flex"><div>© <span id="year"></span> Hamid Metal Industries. All rights reserved.</div><div>Metal • Steel • Fabrication • Wholesale</div></div>
+<div style="margin-top:18px;font-size:13px;color:#94a3b8;">
+  <strong style="color:#e2e8f0;">Hamid Metal Industries</strong><br>
+  Majhipara, Kanchrapara, West Bengal 743145
+</div>
+
 </footer>
-<script>
-const defaultPhotos = [
- {src:"", title:"Steel Fabrication"}, {src:"", title:"SS Railing"},
- {src:"", title:"Metal Grill"}, {src:"", title:"Tin Shed"},
- {src:"", title:"Laser Cutting"}, {src:"", title:"SS TIG Welding"},
- {src:"", title:"Custom Metal Work"}, {src:"", title:"Workshop Projects"}
-];
-let photos = JSON.parse(localStorage.getItem("hmiGallery") || "null") || defaultPhotos;
-
-function saveGallery(){ localStorage.setItem("hmiGallery", JSON.stringify(photos)); }
-
-function renderGallery(){
- const g=document.getElementById("gallery"); g.innerHTML="";
- photos.forEach((photo,i)=>{
-   const card=document.createElement("div"); card.className="photo";
-   if(photo.src) card.style.backgroundImage=`url("${photo.src}")`;
-   else card.style.backgroundImage="linear-gradient(135deg,#1a222b,#0d1116)";
-   card.innerHTML=`<div class="overlay">
-      <span class="caption" contenteditable="true" spellcheck="false">${escapeHtml(photo.title)}</span>
-   </div>
-   <button class="delete" title="ছবি মুছুন">×</button>`;
-   card.querySelector(".caption").addEventListener("blur",e=>{
-      photos[i].title=e.target.textContent.trim() || "My Work"; saveGallery();
-   });
-   card.querySelector(".delete").addEventListener("click",e=>{
-      e.stopPropagation(); photos.splice(i,1); saveGallery(); renderGallery();
-   });
-   g.appendChild(card);
- });
-}
-function escapeHtml(s){return s.replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
-document.getElementById("photoInput").addEventListener("change", function(){
- [...this.files].forEach(file=>{
-   const r=new FileReader();
-   r.onload=e=>{ photos.push({src:e.target.result,title:file.name.replace(/\.[^.]+$/,"")}); saveGallery(); renderGallery(); };
-   r.readAsDataURL(file);
- });
- this.value="";
-});
-function resetGallery(){ if(confirm("ডেমো গ্যালারি ফিরিয়ে আনবেন?")){photos=defaultPhotos;saveGallery();renderGallery();} }
-renderGallery();
-document.getElementById('year').textContent=new Date().getFullYear();
-</script>
-
-<script>
-const SUPABASE_URL = "YOUR_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
-
-async function loadGallery(){
-  const g=document.getElementById("gallery");
-  if(!g) return;
-  if(SUPABASE_URL.startsWith("YOUR_")){
-    g.innerHTML = `<div class="photo"><div class="overlay"><span class="caption">Your Work Photos</span></div></div>`;
-    return;
-  }
-  try{
-    const r=await fetch(`${SUPABASE_URL}/rest/v1/gallery?select=id,title,image_url,sort_order&order=sort_order.asc`,
-      {headers:{apikey:SUPABASE_ANON_KEY,Authorization:`Bearer ${SUPABASE_ANON_KEY}`}});
-    const rows=await r.json();
-    g.innerHTML=rows.map(x=>`<div class="photo" style="background-image:url('${x.image_url.replace(/'/g,"%27")}')">
-      <div class="overlay"><span class="caption">${escapeHtml(x.title||"Our Work")}</span></div>
-    </div>`).join("");
-  }catch(e){g.innerHTML="";}
-}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));}
-loadGallery();
-</script>
-
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
